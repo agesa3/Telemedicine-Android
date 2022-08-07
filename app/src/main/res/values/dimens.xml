@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="layout_padding">16dp</dimen>
+    <dimen name="top_margin_first">16dp</dimen>
+    <dimen name="top_margin_second">8dp</dimen>
+    <dimen name="home_button_reg_height">60dp</dimen>
+    <dimen name="layout_margin">16dp</dimen>
+    <dimen name="form_padding">12dp</dimen>
+    <dimen name="edit_text_min_height">48dp</dimen>
+    <dimen name="edit_text_start_padding">12dp</dimen>
+    <dimen name="remind_password_end_padding">12dp</dimen>
+    <dimen name="vertical_form_padding">20dp</dimen>
+    <dimen name="card_top_padding">8dp</dimen>
+    <dimen name="radio_button_end_margin">16dp</dimen>
+    <dimen name="app_bar_height">48dp</dimen>
+    <dimen name="app_bar_divider">1dp</dimen>
+    <dimen name="horizontal_top_guideline_logo_height">64dp</dimen>
+    <dimen name="horizontal_bottom_guideline_logo_height">118dp</dimen>
+    <dimen name="horizontal_guideline_separator_height">168dp</dimen>
+    <dimen name="card_view_margin_top">24dp</dimen>
+    <dimen name="card_view_corner_radius">10dp</dimen>
+    <dimen name="btn_tab_start_margin">20dp</dimen>
+    <dimen name="tab_separator_vertical_margin">12dp</dimen>
+    <dimen name="tab_separator_width">2dp</dimen>
+    <dimen name="home_separator_width">88dp</dimen>
+    <dimen name="separator_height">1.5dp</dimen>
+    <dimen name="separator_margin">16dp</dimen>
+    <dimen name="horizontal_logo_login_separator_height">228dp</dimen>
+    <dimen name="horizontal_separatoir_guideline_height">168dp</dimen>
+</resources>
