@@ -18,5 +18,14 @@
         android:id="@+id/patientDetailsFragment"
         android:name="com.agesadev.telmed.presentation.detail.PatientDetailsFragment"
         android:label="fragment_patient_details"
-        tools:layout="@layout/fragment_patient_details" />
+        tools:layout="@layout/fragment_patient_details" >
+        <action
+            android:id="@+id/action_patientDetailsFragment_to_patientProfileFragment"
+            app:destination="@id/patientProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/patientProfileFragment"
+        android:name="com.agesadev.telmed.presentation.patientprofile.PatientProfileFragment"
+        android:label="fragment_patient_profile"
+        tools:layout="@layout/fragment_patient_profile" />
 </navigation>

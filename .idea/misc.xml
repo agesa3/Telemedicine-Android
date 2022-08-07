@@ -3,10 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/ic_baseline_graphic_eq_24.xml" value="0.3395" />
+        <entry key="app/src/main/res/drawable/ic_pulse.xml" value="0.3395" />
+        <entry key="app/src/main/res/drawable/ic_splash_icon.xml" value="0.2" />
+        <entry key="app/src/main/res/drawable/ic_temp.xml" value="0.3395" />
         <entry key="app/src/main/res/drawable/login_page_logo.xml" value="0.3395" />
+        <entry key="app/src/main/res/drawable/person.xml" value="0.3395" />
+        <entry key="app/src/main/res/drawable/profile_top_bg.xml" value="0.3385" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.3375" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.5" />
         <entry key="app/src/main/res/layout/fragment_patient_details.xml" value="0.3375" />
+        <entry key="app/src/main/res/layout/fragment_patient_profile.xml" value="0.5" />
         <entry key="app/src/main/res/layout/single_patient_item.xml" value="0.5" />
       </map>
     </option>
