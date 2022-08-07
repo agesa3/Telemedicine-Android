@@ -1,7 +1,7 @@
 package com.agesadev.telmed.data.repository
 
 import com.agesadev.telmed.core.Resource
-import com.agesadev.telmed.data.remote.dto.LoginRequest
+import com.agesadev.telmed.data.remote.dto.auth.LoginRequest
 import com.agesadev.telmed.data.remote.dto.RemoteApi
 import com.agesadev.telmed.domain.model.LoginResponse
 import com.agesadev.telmed.domain.repository.LoginRepository

@@ -1,4 +1,4 @@
-package com.agesadev.telmed.data.remote.dto
+package com.agesadev.telmed.data.remote.dto.auth
 
 import com.agesadev.telmed.domain.model.LoginResponse
 

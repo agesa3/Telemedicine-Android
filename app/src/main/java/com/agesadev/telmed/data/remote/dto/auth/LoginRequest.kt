@@ -1,4 +1,4 @@
-package com.agesadev.telmed.data.remote.dto
+package com.agesadev.telmed.data.remote.dto.auth
 
 data class LoginRequest(
     val email: String,

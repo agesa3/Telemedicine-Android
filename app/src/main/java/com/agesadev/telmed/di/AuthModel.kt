@@ -4,7 +4,10 @@ import com.agesadev.telmed.BuildConfig
 import com.agesadev.telmed.core.Utils
 import com.agesadev.telmed.data.remote.dto.RemoteApi
 import com.agesadev.telmed.data.repository.LoginRepositoryImpl
+import com.agesadev.telmed.data.repository.PatientRepositoryImpl
 import com.agesadev.telmed.domain.repository.LoginRepository
+import com.agesadev.telmed.domain.repository.PatientsRepository
+import com.agesadev.telmed.domain.usecases.GetPatientsUseCase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -51,4 +54,18 @@ object AuthModel {
     fun provideLoginRepository(remoteApi: RemoteApi): LoginRepository {
         return LoginRepositoryImpl(remoteApi)
     }
+
+
+    @Provides
+    @Singleton
+    fun providePatientsRepository(remoteApi: RemoteApi): PatientsRepository {
+        return PatientRepositoryImpl(remoteApi)
+    }
+
+    @Provides
+    @Singleton
+    fun providePatientsUseCase(patientsRepository: PatientsRepository) =
+        GetPatientsUseCase(patientsRepository)
+
+
 }

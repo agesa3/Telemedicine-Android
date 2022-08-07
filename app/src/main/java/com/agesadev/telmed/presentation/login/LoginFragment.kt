@@ -38,15 +38,6 @@ class LoginFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         viewLifecycleOwner.lifecycleScope.launchWhenCreated {
             loginViewModel.loginState.collectLatest { state ->
-//                when (state) {
-//                    is LoginState.Success -> {
-//                        Toast.makeText(requireContext(), "Login Ok", Toast.LENGTH_SHORT).show()
-//                    }
-//                    is LoginState.Failure -> {
-//                        Toast.makeText(requireContext(), "Login Ok", Toast.LENGTH_SHORT).show()
-//                    }
-//
-//                }
                 when (state) {
                     is LoginState.Success -> {
                         when (state.response.token) {
