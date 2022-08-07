@@ -33,11 +33,11 @@ class PatientProfileFragment : Fragment() {
     ): View? {
         _binding = FragmentPatientProfileBinding.inflate(inflater, container, false)
         binding?.apply {
-            patientAge.text = patientArgs.patientData?.date_of_birth + " Years old"
+            patientAge.text = patientArgs.patientData?.date_of_birth
             patientNameCard.text =
-                "${patientArgs.patientData?.first_name} + ${patientArgs.patientData?.last_name}"
+                "${patientArgs.patientData?.first_name} ${patientArgs.patientData?.last_name}"
             patientNameHeader.text =
-                "${patientArgs.patientData?.first_name} + ${patientArgs.patientData?.last_name}"
+                "${patientArgs.patientData?.first_name} ${patientArgs.patientData?.last_name}"
         }
 
         return binding?.root

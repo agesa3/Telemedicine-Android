@@ -47,7 +47,22 @@ class PatientDetailsFragment : Fragment(), ItemClick {
         super.onViewCreated(view, savedInstanceState)
         setUpRecyclerView()
         getAndObservePatients()
+        searchPatient()
 
+    }
+
+    private fun searchPatient() {
+        binding?.searchPatient?.setOnQueryTextListener(object :
+            androidx.appcompat.widget.SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                return false
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                filteredList(newText ?: "")
+                return false
+            }
+        })
     }
 
     private fun setUpRecyclerView() {
@@ -87,6 +102,26 @@ class PatientDetailsFragment : Fragment(), ItemClick {
 
     }
 
+    private fun filteredList(text: String) {
+        val filteredList = ArrayList<Patient>()
+        for (item in patientListAdapter.currentList) {
+            if (item.first_name.lowercase().contains(text.lowercase()) || item.last_name.lowercase()
+                    .contains(text.lowercase())
+            ) {
+                filteredList.add(item)
+            }
+            if (filteredList.isEmpty()) {
+                Snackbar.make(
+                    binding?.root!!,
+                    "No results found",
+                    Snackbar.LENGTH_LONG
+                ).show()
+            } else {
+                patientListAdapter.submitList(filteredList)
+            }
+        }
+    }
+
     private fun showProgressBar() {
         binding?.patientListProgressbar?.visibility = View.VISIBLE
     }
@@ -109,4 +144,6 @@ class PatientDetailsFragment : Fragment(), ItemClick {
             )
         findNavController().navigate(action)
     }
+
+
 }

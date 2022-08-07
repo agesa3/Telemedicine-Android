@@ -1,5 +1,6 @@
 package com.agesadev.telmed.presentation.detail
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -7,6 +8,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.agesadev.telmed.core.ItemClick
+import com.agesadev.telmed.core.returnPatientAge
 import com.agesadev.telmed.databinding.SinglePatientItemBinding
 import com.agesadev.telmed.domain.model.Patient
 import java.util.*
@@ -17,9 +19,10 @@ class PatientListAdapter(private val onPatientClicked: ItemClick) :
     inner class PatientViewHolder(private val binding: SinglePatientItemBinding) :
         RecyclerView.ViewHolder(binding.root), View.OnClickListener {
 
+        @SuppressLint("SetTextI18n")
         fun bind(patient: Patient) {
             binding.apply {
-                patientName.text = patient.first_name
+                patientName.text = "${patient.first_name} ${patient.last_name}"
                 //calulate the age of the patient from the date of birth and current time
                 ageText.text = patient.date_of_birth
 //                ageText.text = patient.toString()
@@ -65,3 +68,5 @@ val patientDiffUtilCallback = object : DiffUtil.ItemCallback<Patient>() {
     }
 
 }
+
+
