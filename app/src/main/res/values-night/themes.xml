@@ -27,12 +27,13 @@
         <item name="colorSurfaceInverse">@color/md_theme_dark_inverseSurface</item>
         <item name="colorOnSurfaceInverse">@color/md_theme_dark_inverseOnSurface</item>
         <item name="colorPrimaryInverse">@color/md_theme_dark_inversePrimary</item>
+        <item name="fontFamily">@font/orienta</item>
     </style>
 
     <style name="Theme.App.Starting" parent="Theme.SplashScreen">
-        <item name="windowSplashScreenBackground">@android:color/white</item>
+        <item name="windowSplashScreenBackground">@color/md_theme_dark_primary</item>
         <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash_icon</item>
-        <item name="windowSplashScreenAnimationDuration">100</item>
+        <item name="windowSplashScreenAnimationDuration">2000</item>
         <item name="postSplashScreenTheme">@style/AppTheme</item>
     </style>
 </resources>

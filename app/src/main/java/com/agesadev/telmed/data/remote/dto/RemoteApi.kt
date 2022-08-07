@@ -2,7 +2,7 @@ package com.agesadev.telmed.data.remote.dto
 
 import com.agesadev.telmed.data.remote.dto.auth.LoginRequest
 import com.agesadev.telmed.data.remote.dto.auth.LoginResponseDto
-import com.agesadev.telmed.data.remote.dto.patient.PatientDto
+import com.agesadev.telmed.data.remote.dto.patient.PatientResponseDto
 import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.Headers
@@ -16,7 +16,7 @@ interface RemoteApi {
         @Body loginRequest: LoginRequest
     ): LoginResponseDto
 
-    @Headers("Content-Type:application/json")
-    @GET("patients/patients")
-    suspend fun getPatients(): List<PatientDto>
+    //    @Headers("Content-Type:application/json")
+    @GET("patients")
+    suspend fun getPatients(): PatientResponseDto
 }

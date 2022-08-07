@@ -32,6 +32,7 @@ class LoginFragment : Fragment() {
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
         binding?.loginButton?.setOnClickListener {
             loginUser()
+            binding?.loginProgressBar?.visibility = View.VISIBLE
         }
         return binding?.root
     }
@@ -64,11 +65,10 @@ class LoginFragment : Fragment() {
                         Toast.makeText(requireContext(), "Failed", Toast.LENGTH_SHORT).show()
                         //show error dialog
                         AlertDialog.Builder(context)
-                            .setTitle("Login Failed")
+                            .setTitle("Alert")
                             .setMessage("Login Failed")
                             .setIcon(android.R.drawable.ic_dialog_alert)
                             .show()
-
                     }
                 }
             }
@@ -86,5 +86,4 @@ class LoginFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
 
     }
-
 }

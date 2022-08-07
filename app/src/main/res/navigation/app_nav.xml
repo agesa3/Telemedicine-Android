@@ -27,5 +27,11 @@
         android:id="@+id/patientProfileFragment"
         android:name="com.agesadev.telmed.presentation.patientprofile.PatientProfileFragment"
         android:label="fragment_patient_profile"
-        tools:layout="@layout/fragment_patient_profile" />
+        tools:layout="@layout/fragment_patient_profile" >
+        <argument
+            android:name="patient_data"
+            app:argType="com.agesadev.telmed.domain.model.Patient"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
 </navigation>

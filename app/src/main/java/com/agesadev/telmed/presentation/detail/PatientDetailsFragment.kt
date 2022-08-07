@@ -1,6 +1,7 @@
 package com.agesadev.telmed.presentation.detail
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +10,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.agesadev.telmed.R
 import com.agesadev.telmed.core.ItemClick
@@ -100,6 +102,11 @@ class PatientDetailsFragment : Fragment(), ItemClick {
     }
 
     override fun onPatientClick(patient: Patient) {
-
+        Log.d("Home", "Patient Clicked: $patient")
+        val action =
+            PatientDetailsFragmentDirections.actionPatientDetailsFragmentToPatientProfileFragment(
+                patient
+            )
+        findNavController().navigate(action)
     }
 }

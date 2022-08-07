@@ -16,7 +16,7 @@ class PatientRepositoryImpl @Inject constructor(
     override fun getAllPatients(): Flow<Resource<List<Patient>>> = flow {
         try {
             emit(Resource.Loading())
-            val patients = remoteApi.getPatients().map {
+            val patients = remoteApi.getPatients().data.map {
                 it.toPatient()
             }
             emit(Resource.Success(patients))

@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.agesadev.telmed.core.ItemClick
 import com.agesadev.telmed.databinding.SinglePatientItemBinding
 import com.agesadev.telmed.domain.model.Patient
+import java.util.*
 
 class PatientListAdapter(private val onPatientClicked: ItemClick) :
     ListAdapter<Patient, PatientListAdapter.PatientViewHolder>(patientDiffUtilCallback) {
@@ -18,8 +19,10 @@ class PatientListAdapter(private val onPatientClicked: ItemClick) :
 
         fun bind(patient: Patient) {
             binding.apply {
-                patientName.text = patient.name
-                ageText.text = patient.age.toString()
+                patientName.text = patient.first_name
+                //calulate the age of the patient from the date of birth and current time
+                ageText.text = patient.date_of_birth
+//                ageText.text = patient.toString()
                 viewMoreChip.setOnClickListener(this@PatientViewHolder)
             }
         }

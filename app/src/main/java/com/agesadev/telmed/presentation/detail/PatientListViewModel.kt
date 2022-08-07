@@ -33,7 +33,7 @@ class PatientListViewModel @Inject constructor(
                     }
                     is Resource.Error -> {
                         _patientList.value =
-                            PatientListState(error = result.error ?: "Error getting ships")
+                            PatientListState(error = result.error ?: "Error getting Patients.")
 
                     }
                     is Resource.Loading -> {
